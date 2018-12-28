@@ -1,39 +1,39 @@
 $(document).ready(function(){
 
 /***menu league title and additional links********************************************************************************************/
-$( "a.navbar-brand" ).text( "Heavyhitters" );
-$("div#dlmaddenmenu ul.navbar-nav ").append('<a href="http://www.daddyleagues.com/heavyhitters/admin/sync_week" class="btn btn-info ajax" role="button" data-method="post" data-disabled="true" data-loader=".ajax-loader-roster" data-html=".rosterresults">  <img class="ajax-loader-roster" style="display:none" alt="Sending ..." src="/img/ajax-loader.gif"> <em class="icon-wrench"></em></a>');
+$( "a.navbar-brand" ).text( "OMFL" );
+$("div#dlmaddenmenu ul.navbar-nav ").append('<a href="http://www.daddyleagues.com/OMFL/admin/sync_week" class="btn btn-info ajax" role="button" data-method="post" data-disabled="true" data-loader=".ajax-loader-roster" data-html=".rosterresults">  <img class="ajax-loader-roster" style="display:none" alt="Sending ..." src="/img/ajax-loader.gif"> <em class="icon-wrench"></em></a>');
 
 /***scoreboard**********************/
- $( "div#flip2").load( "/heavyhitters/schedules div#scores" );
+ $( "div#flip2").load( "/OMFL/schedules div#scores" );
  $('div#flip2').attr('class', 'simple-ticker');
 $('.simple-ticker').attr('id', 'js-ticker-fade');
     $("div#js-ticker-fade").hide();
     $("#flip").on("click", function(){
         $("div#js-ticker-fade").fadeToggle('slow');
     });
- $( "div#flip" ).load( "/heavyhitters/admin .col-xl-6:nth-child(1) .card.text-center.card-default .card-body h4.card-title" );
- $( "div#mem").load( "/heavyhitters/admin ul.navbar-nav.flex-row.mr-3 " );
+ $( "div#flip" ).load( "/OMFL/admin .col-xl-6:nth-child(1) .card.text-center.card-default .card-body h4.card-title" );
+ $( "div#mem").load( "/OMFL/admin ul.navbar-nav.flex-row.mr-3 " );
 
 /*league leaders home page********/
-$( ".passingleaders" ).load( "/heavyhitters/stats/player/passing  .col-xl-10" );
-$( ".rushingleaders" ).load( "/heavyhitters/stats/player/rushing .col-xl-10" );
-$( ".receivingleaders" ).load( "/heavyhitters/stats/player/receiving .col-xl-10" );
-$( ".sacksleaders" ).load( "/heavyhitters/stats/player/defense?sortby=sack  .col-xl-10" );
-$( ".tacklesleaders" ).load( "/heavyhitters/stats/player/defense?sortby=tackles .col-xl-10" );
-$( ".interceptionsleaders" ).load( "/heavyhitters/stats/player/defense?sortby=int .col-xl-10" );
+$( ".passingleaders" ).load( "/OMFL/stats/player/passing  .col-xl-10" );
+$( ".rushingleaders" ).load( "/OMFL/stats/player/rushing .col-xl-10" );
+$( ".receivingleaders" ).load( "/OMFL/stats/player/receiving .col-xl-10" );
+$( ".sacksleaders" ).load( "/OMFL/stats/player/defense?sortby=sack  .col-xl-10" );
+$( ".tacklesleaders" ).load( "/OMFL/stats/player/defense?sortby=tackles .col-xl-10" );
+$( ".interceptionsleaders" ).load( "/OMFL/stats/player/defense?sortby=int .col-xl-10" );
 
 /*standings tabs*******************************************************/
- $( ".afc.standings").load( "/heavyhitters/standings .card.card-default:nth-child(4)" );
- $( ".nfc.standings").load( "/heavyhitters/standings .card.card-default:nth-child(5)" );
+ $( ".afc.standings").load( "/OMFL/standings .card.card-default:nth-child(4)" );
+ $( ".nfc.standings").load( "/OMFL/standings .card.card-default:nth-child(5)" );
 
 /*All Teams Page**********************************************************/
-if(window.location.href=== "http://www.daddyleagues.com/heavyhitters/teams") {
+if(window.location.href=== "http://www.daddyleagues.com/OMFL/teams") {
          $(".col-xl-10").addClass("teams");
      }
 
 /*Standings Page*********************************************************/
-if(window.location.href=== "/heavyhitters/standings") {
+if(window.location.href=== "/OMFL/standings") {
          $(" .table-responsive").addClass("table-responsive-page");
      }
 
@@ -45,8 +45,6 @@ if(window.location.href=== "/heavyhitters/standings") {
 /*BENGALS*/
 $('.col-6.bg-inverse.d-flex.align-items-center.justify-content-center.rounded-right[style*="/img/nfl/teams/right/1.png"]').attr( "style", "" ).css( 'background-image', 'url("http://i.nflcdn.com/static/site/6.3/img/logos/svg/teams/CIN.svg")').wrapInner( "<div id='host'><p>Username</p><p>Cincinnati</p><p>Bengals</p></div>");
 $('.col-6.d-flex.align-items-center.justify-content-center.rounded-left[style*="/img/nfl/teams/left/1.png"]').attr( "style", "" ).css ( 'background-image', 'url("http://i.nflcdn.com/static/site/6.3/img/logos/svg/teams/CIN.svg")').wrapInner( "<div id='visitor'><p>Username</p><p>Cincinnati</p><p>Bengals</p></div>");
-
-
 
 /*BILLS*/
 	$('.col-6.bg-inverse.d-flex.align-items-center.justify-content-center.rounded-right[style*="/img/nfl/teams/right/2.png"]').attr( "style", "" ).css( 'background-image', 'url("https://i.imgur.com/U6fPpSU.png")').wrapInner( "<div id='host'><p>Sandman</p><p>Buffalo</p><p>Bills</p></div>");
